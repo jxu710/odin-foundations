@@ -49,3 +49,10 @@ button:hover{
     border: 1px solid #333;
     transform: translateY(5px); 
 }
+
+button.rainbow{
+    background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+    color: #fff;
+    border: 1px solid #333;
+  
+}
