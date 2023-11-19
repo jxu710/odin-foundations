@@ -3,8 +3,161 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>JS Calculator</title>
     <link rel="stylesheet" href="./css/style.css" />
   </head>
-  <body class="min-h-screen grid place-content-center radial-blue"></body>
+  <body class="min-h-screen radial-blue">
+    <header class="text-white pt-8">
+      <h1 class="text-4xl text-center font-mono text-indigo-400 italic">
+        JS Calculator
+      </h1>
+    </header>
+    <section
+      class="m-auto mt-10 border-solid border-1 border-neutral-500 shadow-stone-500 shadow-2xl bg-orange-200 max-w-md w-96 p-8 pt-14 rounded-xl"
+    >
+      <input
+        type="text"
+        value="0"
+        disabled
+        class="bg-white w-full text-5xl border-none bg-gray-400 text-right pr-2"
+      />
+      <section class="grid grid-cols-4 gap-2 p-4 place-content-center">
+        <button
+          value="7"
+          type="button"
+          class="py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75"
+        >
+          7
+        </button>
+        <button
+          value="8"
+          type="button"
+          class="py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75"
+        >
+          8
+        </button>
+        <button
+          value="9"
+          type="button"
+          class="py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75"
+        >
+          9
+        </button>
+        <button
+          value="/"
+          type="button"
+          class="py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75"
+        >
+          &div;
+        </button>
+        <!-- 2nd row -->
+        <button
+          value="4"
+          type="button"
+          class="py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75"
+        >
+          4
+        </button>
+        <button
+          value="5"
+          type="button"
+          class="py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75"
+        >
+          5
+        </button>
+        <button
+          value="6"
+          type="button"
+          class="py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75"
+        >
+          6
+        </button>
+        <button
+          value="*"
+          type="button"
+          class="py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75"
+        >
+          x
+        </button>
+
+        <!-- 3rd row -->
+        <button
+          value="1"
+          type="button"
+          class="py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75"
+        >
+          1
+        </button>
+        <button
+          value="2"
+          type="button"
+          class="py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75"
+        >
+          2
+        </button>
+        <button
+          value="3"
+          type="button"
+          class="py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75"
+        >
+          3
+        </button>
+        <button
+          value="+"
+          type="button"
+          class="py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75"
+        >
+          +
+        </button>
+        <!-- 4th row -->
+        <button
+          value="0"
+          type="button"
+          class="py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75"
+        >
+          0
+        </button>
+        <button
+          value="."
+          type="button"
+          class="py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75"
+        >
+          .
+        </button>
+        <button
+          value="-"
+          type="button"
+          class="py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75"
+        >
+          -
+        </button>
+        <button
+          value="AC"
+          type="button"
+          class="h-15 w-15 py-2 px-4 bg-red-500 text-white text-center font-semibold rounded-full shadow-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-700 focus:ring-opacity-75 place-self-center"
+        >
+          AC
+        </button>
+        <!-- equal sign -->
+        <button
+          value="="
+          type="button"
+          class="py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75 col-span-4"
+        >
+          =
+        </button>
+      </section>
+    </section>
+
+    <footer
+      class="text-black p-8 bg-indigo-500 fixed bottom-0 w-screen text-center"
+    >
+      Build by Jingru <a href="https://github.com/jxu710">🖥️ </a>as part of
+      <a
+        class="underline"
+        href="https://www.theodinproject.com/paths/foundations/courses/foundations"
+        >The Odin Project</a
+      >
+    </footer>
+  </body>
 </html>
