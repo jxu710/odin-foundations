@@ -63,5 +63,20 @@ function Calculator() {
     screen.value = display;
   };
 
-  this.getAnswer = function (display) {};
+  this.getAnswer = function (display) {
+    let result = Function(`return ${display}`)();
+    result = parseFloat(result.toFixed(9));
+
+    // give error if divide by zero
+    if (result === Infinity) {
+      result = "Error";
+    }
+    // limit to 9 digits if answer is too long
+
+    // Check if the result exceeds the length of the display
+    if (result.toString().length > 10) {
+      result = parseFloat(result.toPrecision(10));
+    }
+    this.showOnScreen(result);
+  };
 }
