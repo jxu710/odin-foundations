@@ -22,10 +22,11 @@ function Calculator() {
         // Clear the screen
         this.display = "0";
         this.previousTotal = null;
+        this.showOnScreen(this.display);
         break;
       case "=":
-        // Calculate the total
-        // Implement your logic here
+        // Calculate the answer
+        this.getAnswer(this.display);
         break;
       case ".":
         // Add a decimal point
@@ -57,8 +58,10 @@ function Calculator() {
     this.showOnScreen(this.display);
   };
 
-  this.showOnScreen = function (text) {
+  this.showOnScreen = function (display) {
     const screen = document.querySelector("#display-screen");
-    screen.value = text;
+    screen.value = display;
   };
+
+  this.getAnswer = function (display) {};
 }
