@@ -28,12 +28,28 @@ function Calculator() {
         // Calculate the answer
         this.getAnswer(this.display);
         break;
+
       case ".":
         // Add a decimal point
-        if (this.display === "0") {
-          this.addToDisplay("0.");
-        } else {
-          this.addToDisplay(value);
+        const lastChar = this.display.slice(-1);
+
+        // Allow adding a decimal point only if the last character is a number
+        if (!isNaN(lastChar)) {
+          // Find the position of the last operator (+, -, *, /)
+          const lastOperatorIndex = Math.max(
+            this.display.lastIndexOf("+"),
+            this.display.lastIndexOf("-"),
+            this.display.lastIndexOf("*"),
+            this.display.lastIndexOf("/")
+          );
+
+          // Get the current number, slice from the position after the last operator.
+          const currentNumber = this.display.slice(lastOperatorIndex + 1);
+
+          // Check if the current number already contains a decimal point
+          if (!currentNumber.includes(".")) {
+            this.addToDisplay(value);
+          }
         }
         break;
       default:
