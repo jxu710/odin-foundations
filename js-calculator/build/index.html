@@ -8,7 +8,7 @@
   </head>
   <body class="min-h-screen radial-blue">
     <header class="text-white pt-8">
-      <h1 class="text-4xl text-center font-mono text-indigo-400 italic">
+      <h1 class="text-4xl text-center font-mono text-indigo-500 italic">
         JS Calculator
       </h1>
     </header>
@@ -16,12 +16,16 @@
       class="m-auto mt-10 border-solid border-1 border-neutral-500 shadow-stone-500 shadow-2xl bg-orange-200 max-w-md w-96 p-8 pt-14 rounded-xl"
     >
       <input
+        id="display-screen"
         type="text"
         value="0"
         disabled
         class="bg-white w-full text-5xl border-none bg-gray-400 text-right pr-2"
       />
-      <section class="grid grid-cols-4 gap-2 p-4 place-content-center">
+      <section
+        id="calculator-buttons"
+        class="grid grid-cols-4 gap-2 p-4 place-content-center"
+      >
         <button
           value="7"
           type="button"
